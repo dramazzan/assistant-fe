@@ -1,4 +1,4 @@
-const apiUrl = import.meta.env.VITE_API_URL?.replace(/\/$/, '') || '';
+const apiUrl = (import.meta.env.VITE_API_URL || 'https://assistant-be-qzoj.onrender.com').replace(/\/$/, '');
 export async function sendChatMessage(message) {
     const response = await fetch(`${apiUrl}/api/chat`, {
         method: 'POST',

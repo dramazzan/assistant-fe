@@ -1,6 +1,6 @@
 import type { ApiErrorResponse, ChatRequest, ChatResponse } from '@/types/chat'
 
-const apiUrl = import.meta.env.VITE_API_URL?.replace(/\/$/, '') || ''
+const apiUrl = (import.meta.env.VITE_API_URL || 'https://assistant-be-qzoj.onrender.com').replace(/\/$/, '')
 
 export async function sendChatMessage(message: string): Promise<ChatResponse> {
   const response = await fetch(`${apiUrl}/api/chat`, {
