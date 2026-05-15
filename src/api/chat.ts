@@ -1,7 +1,9 @@
 import type { ApiErrorResponse, ChatRequest, ChatResponse } from '@/types/chat'
 
+const apiUrl = import.meta.env.VITE_API_URL?.replace(/\/$/, '') || ''
+
 export async function sendChatMessage(message: string): Promise<ChatResponse> {
-  const response = await fetch('/api/chat', {
+  const response = await fetch(`${apiUrl}/api/chat`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

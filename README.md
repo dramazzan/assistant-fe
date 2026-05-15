@@ -11,7 +11,11 @@ npm run dev
 
 ## Docker
 
-Backend должен быть доступен на `http://localhost:4000`.
+Backend адрес хранится в `.env`:
+
+```env
+VITE_API_URL=https://assistant-be-qzoj.onrender.com
+```
 
 ```bash
 docker compose up --build
@@ -34,7 +38,7 @@ docker compose down
 В `docker-compose.yml`:
 
 ```env
-BACKEND_URL=http://host.docker.internal:4000
+BACKEND_URL=https://assistant-be-qzoj.onrender.com
 ```
 
 Для сервера на другом хосте поменять `BACKEND_URL`.

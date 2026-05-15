@@ -6,7 +6,7 @@ services:
     container_name: assistant-frontend
     restart: unless-stopped
     environment:
-      BACKEND_URL: http://host.docker.internal:4000
+      BACKEND_URL: https://assistant-be-qzoj.onrender.com
     extra_hosts:
       - "host.docker.internal:host-gateway"
     ports:
